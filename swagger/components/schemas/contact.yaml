@@ -1,0 +1,46 @@
+type: object
+required:
+  - _id
+  - name
+  - phoneNumber
+  - contactType
+  - createdAt
+  - updatedAt
+properties:
+  _id:
+    type: string
+    description: 'Contact id'
+    example: '65ca67e7ae7f10c88b598384'
+  name:
+    type: string
+    description: 'Contact name'
+    example: 'Dmitrii Dmitrichenko'
+  phoneNumber:
+    type: string
+    description: 'Contact phoneNumber'
+    example: '052145236'
+  contactType:
+    type: string
+    description: 'Contact type'
+    enum: ['work', 'home', 'personal']
+    default: 'personal'
+  email:
+    type: string
+    description: 'Contact mail'
+    example: 'gafg@gmail.com'
+  isFavourite:
+    type: boolean
+    description: 'Contact isFavorite'
+    example: false
+    default: false
+  photo:
+    type: string
+    description: 'contact photo'
+  createdAt:
+    type: string
+    format: data-time
+    example: '2025-07-27T12:12:24.157+00:00'
+  updatedAt:
+    type: string
+    format: data-time
+    example: '2025-08-02T15:45:25.898+00:00'
