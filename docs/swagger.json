@@ -14,7 +14,7 @@
       "url": "http://127.0.0.1:3000"
     },
     {
-      "url": "http://127.0.0.1:3000"
+      "url": "https://hw7-swagger-sdcn.onrender.com"
     }
   ],
   "tags": [
@@ -137,16 +137,28 @@
                           }
                         },
                         "page": {
-                          "type": "integer",
-                          "example": 1
+                          "type": "number",
+                          "example": 2
                         },
                         "perPage": {
-                          "type": "integer",
-                          "example": 10
+                          "type": "number",
+                          "example": 4
                         },
-                        "total": {
-                          "type": "integer",
-                          "example": 35
+                        "totalItems": {
+                          "type": "number",
+                          "example": 4
+                        },
+                        "totalPages": {
+                          "type": "number",
+                          "example": 4
+                        },
+                        "hasNextPage": {
+                          "type": "boolean",
+                          "example": false
+                        },
+                        "hasPreviousPage": {
+                          "type": "boolean",
+                          "example": true
                         }
                       }
                     }
@@ -186,9 +198,7 @@
                 "required": [
                   "name",
                   "phoneNumber",
-                  "contactType",
-                  "email",
-                  "photo"
+                  "contactType"
                 ],
                 "properties": {
                   "name": {
@@ -353,27 +363,7 @@
         ],
         "responses": {
           "204": {
-            "description": "Delete contact by id",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "status"
-                  ],
-                  "properties": {
-                    "status": {
-                      "type": "integer",
-                      "example": 204
-                    },
-                    "message": {
-                      "type": "string",
-                      "example": "No content"
-                    }
-                  }
-                }
-              }
-            }
+            "description": "Delete contact by id"
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -411,9 +401,6 @@
             "multipart/form-data": {
               "schema": {
                 "type": "object",
-                "required": [
-                  "photo"
-                ],
                 "properties": {
                   "photo": {
                     "description": "Contact's photo",

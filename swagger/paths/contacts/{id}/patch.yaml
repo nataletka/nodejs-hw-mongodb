@@ -17,8 +17,7 @@ requestBody:
     multipart/form-data:
       schema:
         type: object
-        required:
-          - photo
+
         properties:
           photo:
             description: "Contact's photo"

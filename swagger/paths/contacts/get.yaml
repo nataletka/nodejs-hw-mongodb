@@ -70,14 +70,23 @@ responses:
                   items:
                     $ref: ../../components/schemas/contact.yaml
                 page:
-                  type: integer
-                  example: 1
+                  type: number
+                  example: 2
                 perPage:
-                  type: integer
-                  example: 10
-                total:
-                  type: integer
-                  example: 35
+                  type: number
+                  example: 4
+                totalItems:
+                  type: number
+                  example: 4
+                totalPages:
+                  type: number
+                  example: 4
+                hasNextPage:
+                  type: boolean
+                  example: false
+                hasPreviousPage:
+                  type: boolean
+                  example: true
   '400':
     $ref: '../../components/responses/400.yaml'
   '401':
